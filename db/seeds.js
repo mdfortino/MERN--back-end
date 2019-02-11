@@ -1,4 +1,4 @@
-const mongoose = require('./schema.js')
+const mongoose = require('./models.js')
 const Bookmark = mongoose.model('Bookmark')
 const bookmarkData = require('./bookmark-data.json')
 
