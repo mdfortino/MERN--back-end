@@ -45,13 +45,13 @@ app.listen(app.get('port'), () => {
       })
   })
 
-  app.delete('api/bookmarks/:id', (req, res) => {
-      Bookmark.findOneAndRemove({_id: req.params.id})
-      .then(bookmark => {
+  app.delete('/api/bookmarks/:id', (req, res) => {
+    Bookmark.findOneAndRemove({_id: req.params.id})
+      .then((bookmark) => {
         res.json(bookmark)
       })
       .catch((err) => {
-          console.log(err)
+        console.log(err)
       })
   })
 
