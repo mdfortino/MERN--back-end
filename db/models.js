@@ -7,8 +7,4 @@ const BookmarkSchema = new mongoose.Schema({
     
 })
 
-const Bookmark = mongoose.model('Bookmark', BookmarkSchema)
-
-module.exports = {
-    Bookmark
-}
+module.exports = mongoose.model('Bookmark', BookmarkSchema)

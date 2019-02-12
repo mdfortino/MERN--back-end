@@ -1,7 +1,7 @@
 const express = require('express')
 const parser = require('body-parser')
 const cors = require('cors')
-const mongoose = require('./db/models.js')
+const Bookmark = require('./db/models')
 
 const app = express() 
 
@@ -12,7 +12,9 @@ app.use(cors())
 app.listen(app.get('port'), () => {
     console.log('Server listening on port ' + app.get('port'))
   })
-  
+// app.get('/', (req,res) => {
+//     res.json({message: "hellow"})
+// })
   app.get('/api/bookmarks', (req, res) => {
     Bookmark.find()
       .then((bookmarks) => {
